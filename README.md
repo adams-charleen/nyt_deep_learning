@@ -34,7 +34,7 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
 
 ## Methods
 
-Due to challenges in obtaining full article texts from the New York Times (NYT) website, we focused our analysis on article headlines. An initial attempt to scrape full texts using a script with the NYT API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, we analyzed headlines retrieved via the NYT API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in our second script to process and analyze these headlines using deep learning and statistical techniques.
+Due to challenges in obtaining full article texts from the NYT website, we focused our analysis on article headlines. An initial attempt to scrape full texts using a script with the NYT API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, we analyzed headlines retrieved via the NYT API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in our second script to process and analyze these headlines using deep learning and statistical techniques.
 
 ### Step 1: Data Retrieval and Storage
 - **SQLite Database Access**: We utilized `sqlite3` to connect to the `nyt_articles_metadata.db` database, which stored metadata for NYT articles (headlines, URLs, publication dates, etc.) collected via the NYT API. The `pandas` library loaded this data into a DataFrame, yielding 563 articles after filtering for relevant terms.
