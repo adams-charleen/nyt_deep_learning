@@ -87,10 +87,4 @@ Due to challenges in obtaining full article texts from the NYT website, we focus
   - **Tool**: `plotly.express` and `plotly.graph_objects` enable interactive visualizations with hover effects and subplots.
   - **Tool**: `plotly.subplots.make_subplots` supports multi-panel layouts.
 
-### Industry Standard Practices
-- **Reproducibility**: We set random seeds and logged all steps to ensure replicability.
-- **Scalability**: Tools like `pandas`, `numpy`, and `sqlite3` are optimized for large datasets.
-- **Robustness**: We used pre-trained BERT models and validated statistical tests for reliable results.
-- **Visualization**: We provided static (`matplotlib`, `seaborn`) and interactive (`plotly`) visualizations to meet diverse user needs.
-
 This methodology leverages cutting-edge NLP and machine learning to provide a rigorous analysis of media coverage, offering actionable insights into content and sentiment trends.
