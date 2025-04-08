@@ -87,12 +87,6 @@ Due to challenges in obtaining full article texts from the New York Times (NYT) 
   - **Tool**: `plotly.express` and `plotly.graph_objects` enable interactive visualizations with hover effects and subplots.
   - **Tool**: `plotly.subplots.make_subplots` supports multi-panel layouts.
 
-### Step 9: Logging and File Management
-- We used `logging` to record the analysis process, saving logs to both the console and a file (`analysis_log.txt`).
-  - **Tool**: `logging` tracks events during script execution, aiding debugging and documentation.
-- We saved results (e.g., cluster summaries, sentiment scores, temporal analysis) to text files and figures to the `results_deep_learning3` and `figures_deep_learning3` directories using `os`.
-  - **Tool**: `os` provides functions for file and directory management.
-
 ### Industry Standard Practices
 - **Reproducibility**: We set random seeds and logged all steps to ensure replicability.
 - **Scalability**: Tools like `pandas`, `numpy`, and `sqlite3` are optimized for large datasets.
