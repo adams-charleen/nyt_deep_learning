@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This study investigates media representation of the Israeli-Palestinian conflict through a computational analysis of 563 *New York Times* (NYT) headlines spanning October 2023 to March 2025. Employing advanced natural language processing and deep learning techniques, we quantify the frequency of mentions of Israel and Palestine, cluster headlines into thematic categories, and assess sentiment variations across these groups. Our analysis reveals a statistically significant disparity in coverage, with Palestinian mentions occurring in 66.6% of headlines compared to 47.4% for Israeli mentions (Z-statistic: -6.501, P-value: <0.000). Through K-means clustering, we identified five distinct thematic clusters, ranging from "Conflict and Violence" to "Peace Efforts and Politics," each exhibiting unique sentiment profiles. These findings illuminate patterns in media framing, offering a data-driven perspective on how editorial choices may shape public discourse on this geopolitically significant issue.
+This study investigates media representation of the Israeli-Palestinian conflict through a computational analysis of 563 *New York Times* (NYT) headlines spanning October 2023 to March 2025. Employing advanced natural language processing and deep learning techniques, we quantify the frequency of mentions of Israel and Palestine, cluster headlines into thematic categories, and assess sentiment variations across these groups. Our analysis reveals a statistically significant disparity in coverage, with Palestinian mentions occurring in 66.6% of headlines compared to 47.4% for Israeli mentions (Z-statistic: -6.501, P-value: <0.0001). Through K-means clustering, we identified five distinct thematic clusters, ranging from "Conflict and Violence" to "Peace Efforts and Politics," each exhibiting unique sentiment profiles. These findings illuminate patterns in media framing, offering a data-driven perspective on how editorial choices may shape public discourse on this geopolitically significant issue.
 
 ## Impact Statement
 
@@ -10,7 +10,7 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
 
 ## Results
 
-- **Headline Mentions**: Of the 563 filtered NYT headlines, 47.4% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 66.6% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.000), indicating a notable bias toward Palestinian mentions.
+- **Headline Mentions**: Of the 563 filtered NYT headlines, 47.4% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 66.6% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
 
 - **Clustering Analysis**: Using K-means clustering, we grouped the 563 headlines into five thematic clusters:
   - **Cluster 0 (73 articles)**: "International Actions and Diplomacy" (e.g., "Turkey Halts Trade With Israel Amid Deteriorating Relations"). Israeli Proportion: 0.42, Palestinian Proportion: 0.77.
