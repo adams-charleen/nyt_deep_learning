@@ -26,12 +26,6 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
   - Cluster 3: -0.653 (strongly negative, driven by political disputes and occupation issues).
   - Cluster 4: -0.159 (slightly negative, reflecting mixed sentiments in U.S.-focused politics).
 
-- **Temporal Trends**: We examined trends in mentions and sentiment from October 2023 to March 2025:
-  - Mentions peaked in October 2023, likely due to escalated conflict (e.g., Cluster 2: 19 Israeli and 16 Palestinian mentions in October 2023).
-  - Sentiment fluctuated over time; for instance, Cluster 1 showed a positive sentiment in February 2024 (1.000) but dropped to -1.000 by October 2024, indicating shifting narrative tones.
-
-- **Visualizations**: We generated a bar plot of mention proportions, a PCA scatter plot of clusters, and temporal trend plots for mentions and sentiment, all saved in the `figures_deep_learning3` directory.
-
 ## Methods
 
 Due to challenges in obtaining full article texts from the NYT website, we focused our analysis on article headlines. An initial attempt to scrape full texts using a script with the NYT API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, we analyzed headlines retrieved via the NYT API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in our second script to process and analyze these headlines using deep learning and statistical techniques.
