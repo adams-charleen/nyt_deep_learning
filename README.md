@@ -31,7 +31,7 @@ This analysis reveals a disproportionate emphasis on Palestinian-related terms a
 
 ---
 
-# [Figure 3: Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
+# [Figure 3: Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive2.html) (click to open)
 The interactive PCA plot visualizes headline clusters using color-coded points, accompanied by a legend. Each dot in the plot represents a *NYT* article. Hovering over it displays the title. Users can click on legend items to selectively toggle visibility, enabling focused exploration of specific clusters and narratives.
 
 ### Clustering Analysis
