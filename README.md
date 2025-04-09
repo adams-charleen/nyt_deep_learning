@@ -6,7 +6,7 @@
 
 Understanding how the Israeli–Palestinian conflict is framed in influential outlets like *The New York Times* (*NYT*) is crucial, as media narratives shape public opinion and can influence policy decisions. This analysis focuses on what most readers actually see—headlines.
 
-I conducted a computational analysis of 563 NYT headlines published between October 1, 2023, and March 7, 2025. Metadata was retrieved using the NYT Article Search API and stored in a structured SQLite database. Articles were included if their headline contained any of 24 conflict-relevant terms (e.g., “Israel,” “Hamas,” “Genocide,” “UNRWA”). Mentions were categorized as “Israeli” (terms like “Israel,” “IDF,” or “Israeli”) or “Palestinian” (e.g., “Palestinian,” “Gaza,” “Hamas”).
+I conducted a computational analysis of 563 *NYT* headlines published between October 1, 2023, and March 7, 2025. Metadata was retrieved using the *NYT* Article Search API and stored in a structured SQLite database. Articles were included if their headline contained any of 24 conflict-relevant terms (e.g., “Israel,” “Hamas,” “Genocide,” “UNRWA”). Mentions were categorized as “Israeli” (terms like “Israel,” “IDF,” or “Israeli”) or “Palestinian” (e.g., “Palestinian,” “Gaza,” “Hamas”).
 
 Using BERT (Bidirectional Encoder Representations from Transformers), I embedded the headlines and grouped them into five thematic clusters via K-means clustering. Sentiment was assessed using both VADER (a rule-based sentiment tool optimized for short texts) and a BERT-based classifier.
 
