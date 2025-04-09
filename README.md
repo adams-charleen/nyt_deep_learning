@@ -11,7 +11,7 @@ We conducted a computational analysis of 563 NYT headlines published between Oct
 
 Using BERT (Bidirectional Encoder Representations from Transformers), we embedded the headlines and grouped them into five thematic clusters via K-means clustering. Sentiment was assessed using both VADER (a rule-based sentiment tool optimized for short texts) and a BERT-based classifier.
 
-The BERT-based classifier: 
+The BERT-based classifier demonstrated that all clusters except cluster 1 were negative in tone:
 
 - **Cluster 0** *(International Actions and Diplomacy)*: highly negative (mean = –0.521)  
 - **Cluster 1** *(Conflict and Violence)*: most positive (mean = +0.331)  
@@ -19,9 +19,11 @@ The BERT-based classifier:
 - **Cluster 3** *(Peace Efforts and Politics)*: most negative overall (mean = –0.653)  
 - **Cluster 4** *(U.S. Politics and Protests)*: mildly negative (mean = –0.159)
 
-Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compared to 267 for Israeli-related ones—a 40.5% higher frequency, with Palestinian terms mentioned 1.4 times for every Israeli mention. This disparity was statistically significant (Two-Proportion Z-Test, n = 563: Z = –6.501, p < 0.0001; restricting to only headlines containing either Israeli or Palestinian terms, n = 510: Z = –7.002, p < 0.0001).
-
 Sentiment differences: Israeli-related headlines were more negative on average (mean VADER score = –0.239) than Palestinian-related ones (mean = –0.208), though the difference was not statistically significant (Welch’s t-test, p = 0.297). The VADER sentiment distribution showed heavier negative skew for Israeli mentions, with a lower median and longer left tail.
+
+
+
+Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compared to 267 for Israeli-related ones—a 40.5% higher frequency, with Palestinian terms mentioned 1.4 times for every Israeli mention. This disparity was statistically significant (Two-Proportion Z-Test, n = 563: Z = –6.501, p < 0.0001; restricting to only headlines containing either Israeli or Palestinian terms, n = 510: Z = –7.002, p < 0.0001).
 
 
 
