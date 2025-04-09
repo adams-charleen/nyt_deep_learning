@@ -12,7 +12,8 @@ The findings reveal a disproportionate emphasis on Palestinian-related terms and
 
 ## Results
 
-![Mentions](proportions_mentions.png)  
+![Mentions](proportions_mentions.png)
+*Figure: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the NYT.*
 
 - **Headline Mentions**: Of the 563 filtered NYT headlines, 47% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 67% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
 
