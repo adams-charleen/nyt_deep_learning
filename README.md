@@ -16,8 +16,7 @@ Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compare
 
 ## Impact Statement
 
-This analysis reveals a disproportionate emphasis on Palestinian-related terms and a modestly more negative tone in headlines mentioning Israel—framing that may contribute to public perceptions of Israel as the primary aggressor. Amid rising antisemitism in the U.S., on college campuses, and globally, this pattern of coverage raises concerns about how media framing may reinforce anti-Israel bias. These findings underscore the potential for headline-level bias to shape public understanding of complex geopolitical conflicts and point to the importance of more balanced media reporting.
-
+This analysis reveals a disproportionate emphasis on Palestinian-related terms and a modestly more negative tone in headlines mentioning Israel—framing that may shape perceptions of Israel as the primary aggressor. Amid rising antisemitism in the U.S., on college campuses, and globally, this coverage trend raises questions about whether media framing could reinforce anti-Israel bias. These findings highlight the potential for headline-level bias to influence public understanding of complex geopolitical conflicts, underscoring the value of balanced reporting.
 
 ## Visual Results
 
