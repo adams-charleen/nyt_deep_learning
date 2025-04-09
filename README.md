@@ -38,13 +38,13 @@ The interactive PCA plot visualizes headline clusters using color-coded points, 
 
 Using K-means clustering, the 563 headlines were grouped into five clusters (theme qualitatively assigned).
 
-| Cluster | Theme                          | N Articles | Example Headline                                                                                              | Avg. Sentiment Score |
-|--------:|--------------------------------|------------|---------------------------------------------------------------------------------------------------------------|----------------------|
-| 0       | International Actions and Diplomacy | 73         | *Turkey Halts Trade With Israel Amid Deteriorating Relations*                                                | –0.521               |
-| 1       | Conflict and Violence          | 59         | *How Iran and Israel Are Unnatural Adversaries*                                                              | +0.331               |
-| 2       | Protests and Cultural Support  | 113        | *The U.S. Must Embrace Palestinian Statehood Now*                                                            | –0.137               |
-| 3       | Peace Efforts and Politics     | 170        | *U.N. Body Demands Israel End Its ‘Unlawful Presence in the Occupied Palestinian Territory’*                | –0.653               |
-| 4       | U.S. Politics and Protests     | 148        | *Three European Countries Formally Recognize Palestinian Statehood*                                         | –0.159               |
+| Cluster | N Articles | Example Headline                                                                                              | Avg. Sentiment Score |
+|--------:|------------|---------------------------------------------------------------------------------------------------------------|----------------------|
+| 0       | 73         | *Turkey Halts Trade With Israel Amid Deteriorating Relations*                                                | –0.521               |
+| 1       | 59         | *How Iran and Israel Are Unnatural Adversaries*                                                              | +0.331               |
+| 2       | 113        | *The U.S. Must Embrace Palestinian Statehood Now*                                                            | –0.137               |
+| 3       | 170        | *U.N. Body Demands Israel End Its ‘Unlawful Presence in the Occupied Palestinian Territory’*                | –0.653               |
+| 4       | 148        | *Three European Countries Formally Recognize Palestinian Statehood*                                         | –0.159               |
 
 
 ---
