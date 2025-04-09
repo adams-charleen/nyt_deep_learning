@@ -16,7 +16,7 @@ Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compare
 
 ## Impact Statement
 
-This analysis reveals a disproportionate emphasis on Palestinian-related terms and a somewhat more-negative tone in headlines mentioning Israel—framing that may lead readers to perceive Israel as the primary aggressor. By highlighting these patterns, the findings underscore how potential headline-level bias can shape public understanding of the conflict and point to the need for more balanced media coverage.
+This analysis reveals a disproportionate emphasis on Palestinian-related terms and a somewhat more-negative tone in headlines mentioning Israel—framing that may subtly lead readers to perceive Israel as the primary aggressor. By highlighting these patterns, the findings underscore how potential headline-level bias can shape public understanding of the conflict and point to the need for more balanced media coverage.
 
 ## Visual Results
 
