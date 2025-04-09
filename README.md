@@ -1,4 +1,4 @@
-# Analyzing Media Coverage of the Israeli-Palestinian Conflict: A Deep-Learning Approach
+# Unbalanced Narratives: Deep-Learning Insights into *NYT* Coverage of the Israeli-Palestinian Conflict
 
 ![Word Cloud](wordcloud_all_filtered.png)
 
