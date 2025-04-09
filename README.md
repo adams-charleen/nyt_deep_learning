@@ -26,6 +26,12 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
   - Cluster 3: -0.653 (strongly negative, driven by political disputes and occupation issues).
   - Cluster 4: -0.159 (slightly negative, reflecting mixed sentiments in U.S.-focused politics).
 
+- **Temporality Insights**
+![Temporal Mentions](temporal_mentions.png)  
+*Figure: Number of mentions over time for Israeli and Palestinian terms.*
+
+---
+
 ## Methods
 
 Due to challenges in obtaining full article texts from the NYT website, I focused our analysis on article headlines. An initial attempt to scrape full texts using a script with the NYT API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, I analyzed headlines retrieved via the NYT API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in our second script to process and analyze these headlines using deep learning and statistical techniques.
