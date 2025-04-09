@@ -1,4 +1,4 @@
-# Analyzing Media Coverage of the Israeli-Palestinian Conflict: A Deep Learning Approach
+# Analyzing Media Coverage of the Israeli-Palestinian Conflict: A Deep-Learning Approach
 
 ## Abstract
 
