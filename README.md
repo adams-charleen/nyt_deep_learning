@@ -34,6 +34,9 @@ The findings reveal a disproportionate emphasis on Palestinian-related terms and
 
 - **Rule-Based (Scoring from a Curated Dictionary with Hand-Crafted Rules) Sentiment Analysis**: Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.
 
+![VADER Sentiment Distribution](vader_sentiment_distribution.png)
+*Figure: Distribution of sentiment score over time for Israeli and Palestinian terms.*
+
 - **Temporality Insights**
 ![Temporal Mentions](temporal_mentions.png)  
 *Figure: Number of mentions over time for Israeli and Palestinian terms.*
