@@ -6,7 +6,9 @@ This study investigates media representation of the Israeli-Palestinian conflict
 
 ## Impact Statement
 
-Understanding the framing of the Israeli-Palestinian conflict in influential outlets like NYT is critical, as media narratives shape public perception and can influence policy decisions. The analysis reveals a higher frequency of Palestinian mentions compared to Israeli ones, potentially skewing reader focus toward Palestinian perspectives. Additionally, sentiment variations across thematic clusters—such as the negative tone in conflict-related headlines versus more neutral tones in peace-focused ones—highlight how editorial framing can evoke distinct emotional responses. By uncovering these patterns, this study underscores the need for balanced reporting and equips stakeholders, including journalists and policymakers, with insights to foster more nuanced public dialogue on the conflict.
+Understanding how the Israeli–Palestinian conflict is framed in influential outlets like NYT is crucial, as media narratives shape public opinion and can drive policy decisions. This analysis, limited to headlines due to paywall and bot-detection restrictions, focuses on what most readers actually see—headlines.
+
+The findings reveal a disproportionate emphasis on Palestinian-related terms and consistently negative sentiment in headlines that mention Israel. This imbalance may lead readers to internalize a skewed narrative that portrays Israel primarily as an aggressor. These results underscore the need for more balanced reporting and equip journalists, policymakers, and media consumers with critical insight into how headline framing can shape collective understanding of complex geopolitical conflicts.
 
 ## Results
 
