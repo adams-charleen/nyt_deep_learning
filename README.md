@@ -18,35 +18,37 @@ Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compare
 
 This analysis reveals a disproportionate emphasis on Palestinian-related terms and a consistently negative tone in headlines mentioning Israel—framing that may lead readers to perceive Israel as the primary aggressor. By highlighting these patterns, the findings underscore how headline-level bias can shape public understanding of the conflict and point to the need for more balanced media coverage.
 
-## Results
+## Visual Results
 
 ![Mentions](proportions_mentions.png)
 *Figure: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the *NYT*.*
 
-### Clustering Analysis
+![Temporal Mentions](temporal_mentions.png)  
+*Figure: Number of mentions over time for Israeli and Palestinian terms.*
+
 
 # [Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
 The interactive PCA plot visualizes headline clusters using color-coded points, accompanied by a legend. Each dot in the plot represents a *NYT* article. Hovering over it displays the title. Users can click on legend items to selectively toggle visibility, enabling focused exploration of specific clusters and narratives.
 
+### Clustering Analysis
+
 Using K-means clustering, the 563 headlines were grouped into five thematic clusters:
 
-| Cluster | Theme                          | N Articles | Example Headline                                                                                              | Israeli Proportion | Palestinian Proportion | Avg. Sentiment Score |
-|--------:|--------------------------------|------------|---------------------------------------------------------------------------------------------------------------|--------------------|------------------------|----------------------|
-| 0       | International Actions and Diplomacy | 73         | *Turkey Halts Trade With Israel Amid Deteriorating Relations*                                                | 0.42               | 0.77                   | –0.521               |
-| 1       | Conflict and Violence          | 59         | *How Iran and Israel Are Unnatural Adversaries*                                                              | 0.58               | 0.75                   | +0.331               |
-| 2       | Protests and Cultural Support  | 113        | *The U.S. Must Embrace Palestinian Statehood Now*                                                            | 0.52               | 0.63                   | –0.137               |
-| 3       | Peace Efforts and Politics     | 170        | *U.N. Body Demands Israel End Its ‘Unlawful Presence in the Occupied Palestinian Territory’*                | 0.48               | 0.70                   | –0.653               |
-| 4       | U.S. Politics and Protests     | 148        | *Three European Countries Formally Recognize Palestinian Statehood*                                         | 0.41               | 0.57                   | –0.159               |
+| Cluster | Theme                          | N Articles | Example Headline                                                                                              | Avg. Sentiment Score |
+|--------:|--------------------------------|------------|---------------------------------------------------------------------------------------------------------------|----------------------|
+| 0       | International Actions and Diplomacy | 73         | *Turkey Halts Trade With Israel Amid Deteriorating Relations*                                                | –0.521               |
+| 1       | Conflict and Violence          | 59         | *How Iran and Israel Are Unnatural Adversaries*                                                              | +0.331               |
+| 2       | Protests and Cultural Support  | 113        | *The U.S. Must Embrace Palestinian Statehood Now*                                                            | –0.137               |
+| 3       | Peace Efforts and Politics     | 170        | *U.N. Body Demands Israel End Its ‘Unlawful Presence in the Occupied Palestinian Territory’*                | –0.653               |
+| 4       | U.S. Politics and Protests     | 148        | *Three European Countries Formally Recognize Palestinian Statehood*                                         | –0.159               |
 
 
-- **Rule-Based (Scoring from a Curated Dictionary with Hand-Crafted Rules) Sentiment Analysis**: Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.
+**Rule-Based (Scoring from a Curated Dictionary with Hand-Crafted Rules) Sentiment Analysis**: Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.
 
 ![VADER Sentiment Distribution](vader_sentiment_distribution.png)
-*Figure: Distribution of sentiment score for Israeli and Palestinian terms.*
+*Figure: Distribution of sentiment score for Israeli and Palestinian terms via Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.
 
-- **Temporality Insights**
-![Temporal Mentions](temporal_mentions.png)  
-*Figure: Number of mentions over time for Israeli and Palestinian terms.*
+
 
 
 
