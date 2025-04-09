@@ -81,7 +81,7 @@ Due to challenges in obtaining full article texts from the NYT website, I focuse
 - I computed the average sentiment for each cluster, revealing distinct tonal variations (e.g., Cluster 1: 0.331, Cluster 3: -0.653).
 
 ### Step 6b: Sentiment Analysis with VADER
-- **Sentiment Model**: I employed a rules-based, pretrained model designed for texts and social media, to perform subgroup sentiment analyses.
+- **Sentiment Model**: I utilized a rules-based, pretrained model designed for texts and social media, to assess the polarity of headlines based on lexical cues for subgroups.
   
 ### Step 7: Temporal Analysis
 - I converted publication dates to monthly periods using `pandas` datetime functionality and grouped the data by month and cluster.
