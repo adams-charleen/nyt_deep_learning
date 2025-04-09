@@ -10,7 +10,7 @@ I conducted a computational analysis of 563 *NYT* headlines published between Oc
 
 Using BERT (Bidirectional Encoder Representations from Transformers), I embedded the headlines and grouped them into five thematic clusters via K-means clustering. Sentiment was assessed using both VADER (Valence Aware Dictionary for sEntiment Reasoner, a rule-based sentiment tool optimized for short texts) and a BERT-based classifier.
 
-Sentiment differences: Israeli-related headlines were more negative on average (mean VADER score = –0.239) than Palestinian-related ones (mean = –0.208), though the difference was not statistically significant (Welch’s t-test, p = 0.297). The VADER sentiment distribution showed heavier negative skew for Israeli mentions, with a lower median and longer left tail.
+Sentiment differences: Israeli-related headlines were more negative on average (mean VADER score = –0.239) than Palestinian-related ones (mean = –0.208), though the difference was not statistically significant (Welch’s T-test, p = 0.297). The VADER sentiment distribution showed heavier negative skew for Israeli mentions, with a lower median and longer left tail.
 
 Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compared to 267 for Israeli-related ones—a 40.5% higher frequency, with Palestinian terms mentioned 1.4 times for every Israeli mention. This disparity was statistically significant (Two-Proportion Z-Test, n = 563: Z = –6.501, p < 0.0001; restricting to only headlines containing either Israeli or Palestinian terms, n = 510: Z = –7.002, p < 0.0001).
 
