@@ -23,12 +23,14 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
   - **Cluster 3 (170 articles)**: "Peace Efforts and Politics" (e.g., "U.N. Body Demands Israel End Its ‘Unlawful Presence in the Occupied Palestinian Territory’"). Israeli Proportion: 0.48, Palestinian Proportion: 0.70.
   - **Cluster 4 (148 articles)**: "U.S. Politics and Protests" (e.g., "Three European Countries Formally Recognize Palestinian Statehood"). Israeli Proportion: 0.41, Palestinian Proportion: 0.57.
 
-- **Sentiment Analysis**: A BERT-based sentiment model assessed the tone of headlines in each cluster:
+- **Deep Learning (Transformer, State-of-the-Art, Google-Made) Sentiment Analysis**: A Bidirectional Encoder Representations from Transformers (BERT)-based sentiment model assessed the tone of headlines in each cluster:
   - Cluster 0: -0.521 (negative, reflecting tense diplomatic narratives).
   - Cluster 1: 0.331 (positive, possibly due to hopeful conflict resolution discussions).
   - Cluster 2: -0.137 (slightly negative, tied to protest-related tensions).
   - Cluster 3: -0.653 (strongly negative, driven by political disputes).
   - Cluster 4: -0.159 (slightly negative, reflecting mixed sentiments in U.S.-focused politics).
+
+- **Rule-Based (Scores Sentiment Using a Curated Dictionary and Hand-Crafted Rules) Sentiment Analysis**: Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.
 
 - **Temporality Insights**
 ![Temporal Mentions](temporal_mentions.png)  
