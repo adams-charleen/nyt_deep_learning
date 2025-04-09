@@ -21,17 +21,17 @@ This analysis reveals a disproportionate emphasis on Palestinian-related terms a
 ## Visual Results
 
 ![Mentions](proportions_mentions.png)
-*Figure: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the *NYT*.*
+*Figure 1: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the *NYT*.*
 
 ---
 
 ![Temporal Mentions](temporal_mentions.png)  
-*Figure: Number of mentions over time for Israeli and Palestinian terms.*
+*Figure 2: Number of mentions over time for Israeli and Palestinian terms, showing more Palestinian terms at most time points.*
 
 
 ---
 
-# [Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
+# [Figure 3: Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
 The interactive PCA plot visualizes headline clusters using color-coded points, accompanied by a legend. Each dot in the plot represents a *NYT* article. Hovering over it displays the title. Users can click on legend items to selectively toggle visibility, enabling focused exploration of specific clusters and narratives.
 
 ### Clustering Analysis
