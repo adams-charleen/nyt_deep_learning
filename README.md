@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This study investigates media representation of the Israeli-Palestinian conflict through a computational analysis of 563 headlines in *The Times* (NYT) spanning October 01, 2023 to March 07, 2025. Employing advanced natural language processing and deep learning techniques, I quantify the frequency of mentions of Israel and Palestine, cluster headlines into thematic categories, and assess sentiment variations across these groups. The analysis reveals a statistically significant disparity in coverage, with Palestinian mentions occurring in 66.6% of headlines compared to 47.4% for Israeli mentions (Z-statistic: -6.501, P-value: <0.0001). Through K-means clustering, I identified five distinct thematic clusters, ranging from "Conflict and Violence" to "Peace Efforts and Politics," each exhibiting unique sentiment profiles. These findings illuminate patterns in media framing, offering a data-driven perspective on how editorial choices may shape public discourse on this geopolitically significant issue.
+This study investigates media representation of the Israeli-Palestinian conflict through a computational analysis of 563 headlines in *The Times* (NYT) spanning October 01, 2023 to March 07, 2025. Employing advanced natural language processing and deep learning techniques, I quantify the frequency of mentions of Israel and Palestine, cluster headlines into thematic categories, and assess sentiment variations across these groups. The analysis reveals a statistically significant disparity in coverage, with Palestinian mentions occurring in 67% of headlines compared to 47% for Israeli mentions (Z-statistic: -6.501, P-value: <0.0001). Through K-means clustering, I identified five distinct thematic clusters, ranging from "Conflict and Violence" to "Peace Efforts and Politics," each exhibiting unique sentiment profiles. These findings illuminate patterns in media framing, offering a data-driven perspective on how editorial choices may shape public discourse on this geopolitically significant issue.
 
 ## Impact Statement
 
@@ -14,7 +14,7 @@ The findings reveal a disproportionate emphasis on Palestinian-related terms and
 
 ![Mentions](proportions_mentions.png)  
 
-- **Headline Mentions**: Of the 563 filtered NYT headlines, 47.4% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 66.6% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
+- **Headline Mentions**: Of the 563 filtered NYT headlines, 47% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 67% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
 
 # [Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
 
@@ -57,7 +57,7 @@ Due to challenges in obtaining full article texts from the NYT website, I focuse
 
 ### Step 3: Proportion Analysis and Statistical Testing
 - **Mention Counting**: I counted headlines mentioning Israeli terms (e.g., "Israel," "Israeli") and Palestinian terms (e.g., "Palestinian," "Gaza") using `pandas` string operations.
-- **Proportion Calculation**: I computed the proportion of headlines mentioning each group (Israeli: 47.4%, Palestinian: 66.6%).
+- **Proportion Calculation**: I computed the proportion of headlines mentioning each group (Israeli: 47%, Palestinian: 67%).
 - **Two-Sample Proportion Z-Test**: I conducted a two-sided statistical test using `scipy.stats.norm` to compare the proportions of Israeli and Palestinian mentions, yielding a Z-statistic of -6.501 and a P-value of <0.000, confirming a statistically significant difference.
   - **Tool**: `scipy.stats.norm` provides statistical functions, including the normal distribution for z-tests.
 - **Visualization**: I created a bar plot using `matplotlib.pyplot` to display the proportions, annotated with the Z-statistic and P-value.
