@@ -75,11 +75,14 @@ Due to challenges in obtaining full article texts from the NYT website, I focuse
   - **Tool**: `sklearn.cluster.KMeans` is a machine learning algorithm that partitions data into clusters by minimizing intra-cluster variance.
 - I assigned cluster labels to each headline and analyzed the clusters for Israeli and Palestinian mentions, calculating proportions within each cluster.
 
-### Step 6: Sentiment Analysis with BERT
+### Step 6a: Sentiment Analysis with BERT
 - **Sentiment Model**: I employed a pre-trained BERT-based sentiment model (`nlptown/bert-base-multilingual-uncased-sentiment`) via `transformers.pipeline` to predict headline sentiment. The model outputs a star rating (1 to 5), which I mapped to a sentiment score from -1 (negative) to 1 (positive).
   - **Tool**: `transformers.pipeline` simplifies the use of pre-trained models for tasks like sentiment analysis.
 - I computed the average sentiment for each cluster, revealing distinct tonal variations (e.g., Cluster 1: 0.331, Cluster 3: -0.653).
 
+### Step 6b: Sentiment Analysis with VADER
+- **Sentiment Model**: I employed a rules-based, pretrained model designed for texts and social media, to perform subgroup sentiment analyses.
+  
 ### Step 7: Temporal Analysis
 - I converted publication dates to monthly periods using `pandas` datetime functionality and grouped the data by month and cluster.
 - For each cluster, I calculated:
