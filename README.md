@@ -42,10 +42,10 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
 
 ## Methods
 
-Due to challenges in obtaining full article texts from the NYT website, I focused the analysis on article headlines. An initial attempt to scrape full texts using a script with the NYT API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, I analyzed headlines retrieved via the NYT API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in the second script to process and analyze these headlines using deep learning and statistical techniques.
+Due to challenges in obtaining full article texts from the NYT website, I focused the analysis on article **headlines**. An initial attempt to scrape full texts using a script with the NYT API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, I analyzed headlines retrieved via the NYT API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in the second script to process and analyze these headlines using deep learning and statistical techniques. 
 
 ### Step 1: Data Retrieval and Storage
-- **SQLite Database Access**: I utilized `sqlite3` to connect to the `nyt_articles_metadata.db` database, which stored metadata for NYT articles (headlines, URLs, publication dates, etc.) collected via the NYT API. The `pandas` library loaded this data into a DataFrame, yielding 563 articles after filtering for relevant terms.
+- **SQLite Database Access**: The API initially pulled all headlines (N=915) that contained my search terms in them or the text of their articles, even though I couldn't access the articles with the script. I utilized `sqlite3` to connect to the `nyt_articles_metadata.db` database, which stored metadata for NYT articles (headlines, URLs, publication dates, etc.) collected via the NYT API. The `pandas` library loaded this data into a DataFrame, yielding 563 articles after filtering for relevant terms. 
   - **Tool**: `sqlite3` is a lightweight, serverless database engine for efficient storage and querying of structured data.
   - **Tool**: `pandas` is a Python library for data manipulation, providing DataFrames for handling tabular data.
 
