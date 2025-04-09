@@ -52,7 +52,7 @@ Due to challenges in obtaining full article texts from the NYT website, I focuse
 ### Step 3: Proportion Analysis and Statistical Testing
 - **Mention Counting**: I counted headlines mentioning Israeli terms (e.g., "Israel," "Israeli") and Palestinian terms (e.g., "Palestinian," "Gaza") using `pandas` string operations.
 - **Proportion Calculation**: I computed the proportion of headlines mentioning each group (Israeli: 47.4%, Palestinian: 66.6%).
-- **Two-Sample Proportion Z-Test**: I conducted a two-sided statistical test using `scipy.stats.norm` to compare the proportions of Israeli and Palestinian mentions, yielding a Z-statistic of -6.501 and a P-value of 0.000, confirming a statistically significant difference.
+- **Two-Sample Proportion Z-Test**: I conducted a two-sided statistical test using `scipy.stats.norm` to compare the proportions of Israeli and Palestinian mentions, yielding a Z-statistic of -6.501 and a P-value of <0.000, confirming a statistically significant difference.
   - **Tool**: `scipy.stats.norm` provides statistical functions, including the normal distribution for z-tests.
 - **Visualization**: I created a bar plot using `matplotlib.pyplot` to display the proportions, annotated with the Z-statistic and P-value.
   - **Tool**: `matplotlib.pyplot` is a plotting library for creating static visualizations like bar plots.
