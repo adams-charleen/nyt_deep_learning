@@ -1,0 +1,55 @@
+Section Sentiment Analysis (BERT-based):
+
+Cluster 0:
+Section Arts: Average Sentiment = -0.312
+Section New York: Average Sentiment = -0.333
+Section Opinion: Average Sentiment = -1.000
+Section U.S.: Average Sentiment = -0.475
+Section World: Average Sentiment = -0.605
+
+Cluster 1:
+Section Arts: Average Sentiment = 1.000
+Section Business Day: Average Sentiment = -1.000
+Section Magazine: Average Sentiment = 1.000
+Section New York: Average Sentiment = 0.583
+Section Opinion: Average Sentiment = 0.250
+Section Science: Average Sentiment = 0.500
+Section The Learning Network: Average Sentiment = 0.500
+Section U.S.: Average Sentiment = 0.000
+Section World: Average Sentiment = 0.542
+
+Cluster 2:
+Section Arts: Average Sentiment = 0.250
+Section Books: Average Sentiment = -0.167
+Section Business Day: Average Sentiment = 0.000
+Section Food: Average Sentiment = 1.000
+Section Magazine: Average Sentiment = 0.667
+Section New York: Average Sentiment = -0.100
+Section Opinion: Average Sentiment = -0.207
+Section U.S.: Average Sentiment = -0.429
+Section World: Average Sentiment = -0.113
+
+Cluster 3:
+Section Arts: Average Sentiment = -0.900
+Section Books: Average Sentiment = -1.000
+Section Business Day: Average Sentiment = -1.000
+Section Movies: Average Sentiment = 0.500
+Section New York: Average Sentiment = -0.550
+Section Opinion: Average Sentiment = -1.000
+Section Sports: Average Sentiment = -1.000
+Section U.S.: Average Sentiment = -0.615
+Section World: Average Sentiment = -0.642
+
+Cluster 4:
+Section Arts: Average Sentiment = -0.286
+Section Books: Average Sentiment = -0.333
+Section Briefing: Average Sentiment = -1.000
+Section Business Day: Average Sentiment = -0.333
+Section Magazine: Average Sentiment = 0.500
+Section New York: Average Sentiment = -0.500
+Section Opinion: Average Sentiment = 0.015
+Section Podcasts: Average Sentiment = 0.500
+Section Style: Average Sentiment = 0.500
+Section Technology: Average Sentiment = 0.500
+Section U.S.: Average Sentiment = 0.000
+Section World: Average Sentiment = -0.333

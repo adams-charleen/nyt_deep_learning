@@ -1,0 +1,56 @@
+Cluster Analysis Results:
+
+Cluster 0:
+Size: 73
+Israeli Mentions: 31
+Palestinian Mentions: 56
+Sample Headlines:
+  - Israel’s Occupation of Palestinian Territories Draws Focus of U.N. Court
+  - Turkey Halts Trade With Israel Amid Deteriorating Relations
+  - U.S. and Allies Penalize Iran for Striking Israel, and Try to Avert War
+  - White House Condemns Protest at Israeli Restaurant in Philadelphia
+  - U.S. Continues Push for Saudi-Israel Ties Even as War With Hamas Begins
+
+Cluster 1:
+Size: 59
+Israeli Mentions: 34
+Palestinian Mentions: 44
+Sample Headlines:
+  - Promoting Peace as War Rages: Israeli and Palestinian Activists Meet
+  - How Biden’s Support for Israel Could Complicate His Re-Election
+  - How the Israeli-Palestinian Conflict Drove a Wedge Into the Democratic Party
+  - How Iran and Israel Are Unnatural Adversaries
+  - An Arab Mandate for Palestine
+
+Cluster 2:
+Size: 113
+Israeli Mentions: 59
+Palestinian Mentions: 71
+Sample Headlines:
+  - Pro-Palestinian Group Is Relentless in Its Criticism of Israel, and It Isn’t Backing Down
+  - An Unexpected Player in Israel’s Defense: Jordan, Home to Many Palestinians
+  - The U.S. Must Embrace Palestinian Statehood Now
+  - The Left Is Dooming Any Hope for a Palestinian State
+  - Accused of Genocide, Israelis See Reversal of Reality. Palestinians See Justice.
+
+Cluster 3:
+Size: 170
+Israeli Mentions: 82
+Palestinian Mentions: 119
+Sample Headlines:
+  - U.N. Body Demands Israel End Its ‘Unlawful Presence in the Occupied Palestinian Territory’
+  - Israeli Minister Will Release Palestinian Funds if Settlements Are Legalized, Officials Say
+  - Murals in Tehran Offer Tributes and Threats Against Israel
+  - Saudi Arabia Pledges to Send Funding for Palestinians
+  - Protests Erupt Across the Middle East Over Israel’s Siege of Gaza
+
+Cluster 4:
+Size: 148
+Israeli Mentions: 61
+Palestinian Mentions: 85
+Sample Headlines:
+  - Why Trump’s Plan to Relocate Gazans Is Untenable for Jordan
+  - Dave Chappelle Laments ‘Nightmare’ Facing Israelis and Palestinians
+  - Three European Countries Formally Recognize Palestinian Statehood
+  - The War Is Shifting Europe’s Politics Away From Israel
+  - Brown Rejects Protesters’ Push to Divest Over Israel Ties

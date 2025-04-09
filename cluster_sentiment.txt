@@ -1,0 +1,6 @@
+Cluster Sentiment Analysis (BERT-based):
+Cluster 0: Average Sentiment = -0.521
+Cluster 1: Average Sentiment = 0.331
+Cluster 2: Average Sentiment = -0.137
+Cluster 3: Average Sentiment = -0.653
+Cluster 4: Average Sentiment = -0.159
