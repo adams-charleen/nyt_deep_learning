@@ -19,7 +19,6 @@ Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compare
 This analysis reveals a disproportionate emphasis on Palestinian-related terms and a consistently negative tone in headlines mentioning Israel—framing that may lead readers to perceive Israel as the primary aggressor. By highlighting these patterns, the findings underscore how headline-level bias can shape public understanding of the conflict and point to the need for more balanced media coverage.
 
 ## Visual Results
----
 
 ![Mentions](proportions_mentions.png)
 *Figure: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the *NYT*.*
