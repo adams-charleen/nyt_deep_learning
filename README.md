@@ -4,22 +4,22 @@
 
 ## Abstract
 
-Understanding how the Israeli–Palestinian conflict is framed in influential outlets like NYT is crucial, as media narratives shape public opinion and can drive policy decisions. This analysis focuses on what most readers actually see—headlines.
+Understanding how the Israeli–Palestinian conflict is framed in influential outlets like *The New York Times* (*NYT*) is crucial, as media narratives shape public opinion and can influence policy decisions. This analysis focuses on what most readers actually see—headlines—since non-subscribers are limited to five free articles per week and most users rarely read beyond the headline itself.
 
-I conducted a computational analysis of how *The New York Times* (*NYT*) headlines represent the Israeli-Palestinian war, focusing on 563 articles published between October 1, 2023, and March 7, 2025. Using a NYT Developer Account and the Article Search API, I scraped metadata from 915 articles containing conflict-related keywords (“Israel,” “Israeli,” “Palestine,” and “Palestinian”). Headline-level data was extracted and organized into a structured SQLite database (nyt_articles_metadata.db) to enable large-scale sentiment and clustering analysis.
+I conducted a computational analysis of how *NYT* headlines portray the Israeli–Palestinian war, examining 563 articles published between October 1, 2023, and March 7, 2025. Using a *NYT* Developer Account and the Article Search API, I scraped metadata from 915 articles containing conflict-related keywords (“Israel,” “Israeli,” “Palestine,” and “Palestinian”) and stored the results in a structured SQLite database for large-scale analysis.
 
-Employing natural language processing and deep-learning techniques, I quantified the frequency of mentions of Israel and Palestine, clustered headlines into thematic categories, and assessed sentiment variations across these groups. The analysis reveals a statistically significant disparity in coverage, with Palestinian mentions occurring in 67% of headlines compared to 47% for Israeli mentions (Z-statistic: -6.501, P-value: <0.0001). Through K-means clustering, I identified five thematic clusters, ranging from "Conflict and Violence" to "Peace Efforts and Politics," each exhibiting unique sentiment profiles. 
+Applying natural language processing and deep learning, I embedded headlines using BERT (Bidirectional Encoder Representations from Transformers) and grouped them into five thematic clusters via K-means clustering. I also assessed sentiment using two distinct approaches: a BERT-based model and VADER (Valence Aware Dictionary and sEntiment Reasoner), a lexicon- and rule-based tool designed for short texts. Results reveal a significant imbalance in coverage: Palestinian-related terms appeared in 67% of headlines, compared to 47% for Israeli terms (Z = –6.501, p < 0.0001). Sentiment scores also skewed more negative for Israeli mentions (mean = –0.239) than for Palestinian ones (mean = –0.208), as visualized in the VADER sentiment distribution plot. Each cluster revealed unique narrative tones, with conflict-driven headlines carrying the most negativity and peace-related ones appearing more neutral.
 
 ## Impact Statement
 
-The findings reveal a disproportionate emphasis on Palestinian-related terms and consistently negative sentiment in headlines that mention Israel. This imbalance may lead readers to internalize a skewed narrative that portrays Israel primarily as an aggressor. These results underscore the need for more balanced reporting and equip journalists, policymakers, and media consumers with critical insight into how headline framing can shape collective understanding of complex geopolitical conflicts.
+This analysis reveals a disproportionate emphasis on Palestinian-related terms and a consistently negative tone in headlines mentioning Israel—framing that may lead readers to perceive Israel as the primary aggressor. By highlighting these patterns, the findings underscore how headline-level bias can shape public understanding of the conflict and point to the need for more balanced media coverage.
 
 ## Results
 
 ![Mentions](proportions_mentions.png)
-*Figure: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the NYT.*
+*Figure: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the *NYT*.*
 
-- **Headline Mentions**: Of the 563 filtered NYT headlines, 47% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 67% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
+- **Headline Mentions**: Of the 563 filtered *NYT* headlines, 47% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 67% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
 
 - **Clustering Analysis**: Using K-means clustering, the 563 headlines were grouped into five thematic clusters:
   - **Cluster 0 (73 articles)**: "International Actions and Diplomacy" (e.g., "Turkey Halts Trade With Israel Amid Deteriorating Relations"). Israeli Proportion: 0.42, Palestinian Proportion: 0.77.
@@ -29,7 +29,7 @@ The findings reveal a disproportionate emphasis on Palestinian-related terms and
   - **Cluster 4 (148 articles)**: "U.S. Politics and Protests" (e.g., "Three European Countries Formally Recognize Palestinian Statehood"). Israeli Proportion: 0.41, Palestinian Proportion: 0.57.
 
 # [Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
-The interactive PCA plot visualizes headline clusters using color-coded points, accompanied by a legend. Each dot in the plot represents a NYT article. Hovering over it displays the title. Users can click on legend items to selectively toggle visibility, enabling focused exploration of specific clusters and narratives.
+The interactive PCA plot visualizes headline clusters using color-coded points, accompanied by a legend. Each dot in the plot represents a *NYT* article. Hovering over it displays the title. Users can click on legend items to selectively toggle visibility, enabling focused exploration of specific clusters and narratives.
 
 - **Deep Learning (Google-Made-Transformer) Sentiment Analysis**: A Bidirectional Encoder Representations from Transformers (BERT)-based sentiment model assessed the tone of headlines in each cluster:
   - Cluster 0: -0.521 (negative, reflecting tense diplomatic narratives).
@@ -53,10 +53,10 @@ The interactive PCA plot visualizes headline clusters using color-coded points, 
 
 ## Methods
 
-Due to challenges in obtaining full article texts from the NYT website, I focused the analysis on article **headlines**. An initial attempt to scrape full texts using a script with the NYT API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, I analyzed headlines retrieved via the NYT API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in the second script to process and analyze these headlines using deep learning and statistical techniques. 
+Due to challenges in obtaining full article texts from the *NYT* website, I focused the analysis on article **headlines**. An initial attempt to scrape full texts using a script with the *NYT* API and Selenium was hindered by login requirements, CAPTCHAs, and anti-bot measures. Consequently, I analyzed headlines retrieved via the *NYT* API and stored in a SQLite database (`nyt_articles_metadata.db`). Below is a detailed description of the methods used in the second script to process and analyze these headlines using deep learning and statistical techniques. 
 
 ### Step 1: Data Retrieval and Storage
-- **SQLite Database Access**: The API initially pulled all headlines (N=915) that contained my search terms in them or the text of their articles, even though I couldn't access the articles with the script. I utilized `sqlite3` to connect to the `nyt_articles_metadata.db` database, which stored metadata for NYT articles (headlines, URLs, publication dates, etc.) collected via the NYT API. The `pandas` library loaded this data into a DataFrame, yielding 563 articles after filtering for relevant terms. 
+- **SQLite Database Access**: The API initially pulled all headlines (N=915) that contained my search terms in them or the text of their articles, even though I couldn't access the articles with the script. I utilized `sqlite3` to connect to the `nyt_articles_metadata.db` database, which stored metadata for *NYT* articles (headlines, URLs, publication dates, etc.) collected via the *NYT* API. The `pandas` library loaded this data into a DataFrame, yielding 563 articles after filtering for relevant terms. 
   - **Tool**: `sqlite3` is a lightweight, serverless database engine for efficient storage and querying of structured data.
   - **Tool**: `pandas` is a Python library for data manipulation, providing DataFrames for handling tabular data.
 
