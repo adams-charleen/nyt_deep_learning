@@ -12,6 +12,8 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
 
 - **Headline Mentions**: Of the 563 filtered NYT headlines, 47.4% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 66.6% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
 
+[![Interactive PCA Plot](figures_deep_learning4/cluster_visualization.png)](https://adams-charleen.github.io/https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html)
+
 - **Clustering Analysis**: Using K-means clustering, I grouped the 563 headlines into five thematic clusters:
   - **Cluster 0 (73 articles)**: "International Actions and Diplomacy" (e.g., "Turkey Halts Trade With Israel Amid Deteriorating Relations"). Israeli Proportion: 0.42, Palestinian Proportion: 0.77.
   - **Cluster 1 (59 articles)**: "Conflict and Violence" (e.g., "How Iran and Israel Are Unnatural Adversaries"). Israeli Proportion: 0.58, Palestinian Proportion: 0.75.
