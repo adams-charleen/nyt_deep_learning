@@ -46,7 +46,8 @@ Using K-means clustering, the 563 headlines were grouped into five thematic clus
 **Rule-Based (Scoring from a Curated Dictionary with Hand-Crafted Rules) Sentiment Analysis**: Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.
 
 ![VADER Sentiment Distribution](vader_sentiment_distribution.png)
-*Figure: Distribution of sentiment score for Israeli and Palestinian terms via Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.
+*Figure: Distribution of VADER sentiment score for Israeli and Palestinian terms* 
+VADER (Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.)
 
 
 
