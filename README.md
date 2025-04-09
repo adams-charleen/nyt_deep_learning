@@ -27,7 +27,7 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
   - Cluster 0: -0.521 (negative, reflecting tense diplomatic narratives).
   - Cluster 1: 0.331 (positive, possibly due to hopeful conflict resolution discussions).
   - Cluster 2: -0.137 (slightly negative, tied to protest-related tensions).
-  - Cluster 3: -0.653 (strongly negative, driven by political disputes and occupation issues).
+  - Cluster 3: -0.653 (strongly negative, driven by political disputes).
   - Cluster 4: -0.159 (slightly negative, reflecting mixed sentiments in U.S.-focused politics).
 
 - **Temporality Insights**
