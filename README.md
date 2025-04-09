@@ -19,14 +19,15 @@ The findings reveal a disproportionate emphasis on Palestinian-related terms and
 
 - **Headline Mentions**: Of the 563 filtered NYT headlines, 47% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 67% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
 
-# [Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
-
 - **Clustering Analysis**: Using K-means clustering, the 563 headlines were grouped into five thematic clusters:
   - **Cluster 0 (73 articles)**: "International Actions and Diplomacy" (e.g., "Turkey Halts Trade With Israel Amid Deteriorating Relations"). Israeli Proportion: 0.42, Palestinian Proportion: 0.77.
   - **Cluster 1 (59 articles)**: "Conflict and Violence" (e.g., "How Iran and Israel Are Unnatural Adversaries"). Israeli Proportion: 0.58, Palestinian Proportion: 0.75.
   - **Cluster 2 (113 articles)**: "Protests and Cultural Support" (e.g., "The U.S. Must Embrace Palestinian Statehood Now"). Israeli Proportion: 0.52, Palestinian Proportion: 0.63.
   - **Cluster 3 (170 articles)**: "Peace Efforts and Politics" (e.g., "U.N. Body Demands Israel End Its ‘Unlawful Presence in the Occupied Palestinian Territory’"). Israeli Proportion: 0.48, Palestinian Proportion: 0.70.
   - **Cluster 4 (148 articles)**: "U.S. Politics and Protests" (e.g., "Three European Countries Formally Recognize Palestinian Statehood"). Israeli Proportion: 0.41, Palestinian Proportion: 0.57.
+
+# [Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html) (click to open)
+The interactive PCA plot visualizes headline clusters using color-coded points, accompanied by a legend. Each dot in the plot represents a NYT article. Hovering over it displays the title. Users can click on legend items to selectively toggle visibility, enabling focused exploration of specific clusters and narratives.
 
 - **Deep Learning (Google-Made-Transformer) Sentiment Analysis**: A Bidirectional Encoder Representations from Transformers (BERT)-based sentiment model assessed the tone of headlines in each cluster:
   - Cluster 0: -0.521 (negative, reflecting tense diplomatic narratives).
