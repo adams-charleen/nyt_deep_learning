@@ -8,7 +8,10 @@ Understanding how the Israeli–Palestinian conflict is framed in influential ou
 
 I conducted a computational analysis of how *NYT* headlines portray the Israeli–Palestinian war, examining 563 articles published between October 1, 2023, and March 7, 2025. Using a *NYT* Developer Account and the Article Search API, I scraped metadata from 915 articles containing conflict-related keywords (“Israel,” “Israeli,” “Palestine,” and “Palestinian”) and stored the results in a structured SQLite database for large-scale analysis.
 
-Applying natural language processing and deep learning, I embedded headlines using BERT (Bidirectional Encoder Representations from Transformers) and grouped them into five thematic clusters via K-means clustering. I also assessed sentiment using two distinct approaches: a BERT-based model and VADER (Valence Aware Dictionary and sEntiment Reasoner), a lexicon- and rule-based tool designed for short texts. Results reveal a significant imbalance in coverage: Palestinian-related terms appeared in 67% of headlines, compared to 47% for Israeli terms (Z = –6.501, *p* < 0.0001). Sentiment scores also skewed more negative for Israeli mentions (mean = –0.239) than for Palestinian ones (mean = –0.208), as visualized in the VADER sentiment distribution plot. Each cluster revealed unique narrative tones, with conflict-driven headlines carrying the most negativity and peace-related ones appearing more neutral.
+Applying natural language processing and deep learning, I embedded headlines using BERT (Bidirectional Encoder Representations from Transformers) and grouped them into five thematic clusters via K-means clustering. I also assessed sentiment using two distinct approaches: a BERT-based model and VADER (Valence Aware Dictionary and sEntiment Reasoner), a lexicon- and rule-based tool designed for short texts. Results reveal a significant imbalance in coverage: Palestinian-related terms appeared in 375 headlines, compared to 267 for Israeli-related terms—a 40.5% higher frequency, meaning Palestinian terms were mentioned 1.4 times for every Israeli mention: (Two-Proportion Z-Test: Z = –6.501, *P* < 0.0001). Sentiment scores also skewed more negative for Israeli mentions (mean = –0.239) than for Palestinian ones (mean = –0.208), as visualized in the VADER sentiment distribution plot. 
+
+Each cluster revealed unique narrative tones, with conflict-driven headlines carrying the most negativity and peace-related ones appearing more neutral.
+
 
 ## Impact Statement
 
@@ -19,7 +22,9 @@ This analysis reveals a disproportionate emphasis on Palestinian-related terms a
 ![Mentions](proportions_mentions.png)
 *Figure: Proportions of mentions for Israeli and Palestinian terms from 10/01/2023 to 04/07/2025 in the *NYT*.*
 
-- **Headline Mentions**: Of the 563 filtered *NYT* headlines, 47% mentioned Israeli terms (e.g., "Israel," "Israeli," "IDF"), while 67% mentioned Palestinian terms (e.g., "Palestinian," "Palestine," "Hamas," "Gaza"). A two-sample proportion z-test confirmed this difference as statistically significant (Z-statistic: -6.501, P-value: <0.0001), indicating a notable bias toward Palestinian mentions.
+- **Headline Mentions**: Of the 563 *NYT* headlines, Palestinian-related terms appeared in 375 headlines, compared to 267 for Israeli-related terms. 
+-
+- indicating a notable bias toward Palestinian mentions.
 
 - **Clustering Analysis**: Using K-means clustering, the 563 headlines were grouped into five thematic clusters:
   - **Cluster 0 (73 articles)**: "International Actions and Diplomacy" (e.g., "Turkey Halts Trade With Israel Amid Deteriorating Relations"). Israeli Proportion: 0.42, Palestinian Proportion: 0.77.
