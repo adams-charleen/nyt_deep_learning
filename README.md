@@ -1,5 +1,7 @@
 # Analyzing Media Coverage of the Israeli-Palestinian Conflict: A Deep-Learning Approach
 
+![Word Cloud](wordcloud_all_filtered.png)
+
 ## Abstract
 
 Understanding how the Israeli–Palestinian conflict is framed in influential outlets like NYT is crucial, as media narratives shape public opinion and can drive policy decisions. This analysis focuses on what most readers actually see—headlines.
