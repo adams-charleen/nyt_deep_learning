@@ -16,7 +16,7 @@ Coverage imbalance: Palestinian-related terms appeared in 375 headlines, compare
 
 ## Impact Statement
 
-This analysis reveals a disproportionate emphasis on Palestinian-related terms and a consistently negative tone in headlines mentioning Israel—framing that may lead readers to perceive Israel as the primary aggressor. By highlighting these patterns, the findings underscore how headline-level bias can shape public understanding of the conflict and point to the need for more balanced media coverage.
+This analysis reveals a disproportionate emphasis on Palestinian-related terms and a somewhat more-negative tone in headlines mentioning Israel—framing that may lead readers to perceive Israel as the primary aggressor. By highlighting these patterns, the findings underscore how headline-level bias can shape public understanding of the conflict and point to the need for more balanced media coverage.
 
 ## Visual Results
 
@@ -116,5 +116,3 @@ Due to challenges in obtaining full article texts from the *NYT* website, I focu
 - **Interactive Plot**: I used `plotly.express` and `plotly.graph_objects` to create an interactive scatter plot with a subplot showing mention proportions, including hover tooltips and statistical annotations.
   - **Tool**: `plotly.express` and `plotly.graph_objects` enable interactive visualizations with hover effects and subplots.
   - **Tool**: `plotly.subplots.make_subplots` supports multi-panel layouts.
-
-This methodology leverages cutting-edge NLP and machine learning to provide a rigorous analysis of media coverage, offering actionable insights into content and sentiment trends.
