@@ -36,7 +36,7 @@ The interactive PCA plot visualizes headline clusters using color-coded points, 
 
 ### Clustering Analysis
 
-Using K-means clustering, the 563 headlines were grouped into five thematic clusters:
+Using K-means clustering, the 563 headlines were grouped into five clusters (theme qualitatively assigned).
 
 | Cluster | Theme                          | N Articles | Example Headline                                                                                              | Avg. Sentiment Score |
 |--------:|--------------------------------|------------|---------------------------------------------------------------------------------------------------------------|----------------------|
