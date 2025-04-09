@@ -8,7 +8,7 @@ Understanding how the Israeli–Palestinian conflict is framed in influential ou
 
 I conducted a computational analysis of 563 *NYT* headlines published between October 1, 2023, and March 7, 2025. Metadata was retrieved using the *NYT* Article Search API and stored in a structured SQLite database. Articles were included if their headline contained any of 24 conflict-relevant terms (e.g., “Israel,” “Hamas,” “Genocide,” “UNRWA”). Mentions were categorized as “Israeli” (terms like “Israel,” “IDF,” or “Israeli”) or “Palestinian” (e.g., “Palestinian,” “Gaza,” “Hamas”).
 
-Using BERT (Bidirectional Encoder Representations from Transformers), I embedded the headlines and grouped them into five thematic clusters via K-means clustering. Sentiment was assessed using both VADER (a rule-based sentiment tool optimized for short texts) and a BERT-based classifier.
+Using BERT (Bidirectional Encoder Representations from Transformers), I embedded the headlines and grouped them into five thematic clusters via K-means clustering. Sentiment was assessed using both VADER (Valence Aware Dictionary for sEntiment Reasoner, a rule-based sentiment tool optimized for short texts) and a BERT-based classifier.
 
 Sentiment differences: Israeli-related headlines were more negative on average (mean VADER score = –0.239) than Palestinian-related ones (mean = –0.208), though the difference was not statistically significant (Welch’s t-test, p = 0.297). The VADER sentiment distribution showed heavier negative skew for Israeli mentions, with a lower median and longer left tail.
 
@@ -50,11 +50,6 @@ Using K-means clustering, the 563 headlines were grouped into five thematic clus
 ---
 ![VADER Sentiment Distribution](vader_sentiment_distribution.png)
 *Figure 4: Distribution of VADER sentiment score for Israeli and Palestinian terms*.
-
-Valence Aware Dictionary for sEntiment Reasoner (VADER), is a pre-trained model designed for texts and social media.
-
-
-
 
 
 ---
