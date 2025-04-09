@@ -49,7 +49,8 @@ Using K-means clustering, the 563 headlines were grouped into five thematic clus
 
 ---
 ![VADER Sentiment Distribution](vader_sentiment_distribution.png)
-*Figure 4: Distribution of VADER sentiment score for Israeli and Palestinian terms* 
+*Figure 4: Distribution of VADER sentiment score for Israeli and Palestinian terms*.
+
 VADER (Valence Aware Dictionary for sEntiment Reasoner (VADER), which is a pre-trained model designed for texts and social media, was used to capture sentiment by group.)
 
 
