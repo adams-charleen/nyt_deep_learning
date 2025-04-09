@@ -16,7 +16,7 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
 
 [Interactive PCA Plot](https://adams-charleen.github.io/nyt_deep_learning/pca_interactive.html)
 
-- **Clustering Analysis**: Using K-means clustering, I grouped the 563 headlines into five thematic clusters:
+- **Clustering Analysis**: Using K-means clustering, the 563 headlines were grouped into five thematic clusters:
   - **Cluster 0 (73 articles)**: "International Actions and Diplomacy" (e.g., "Turkey Halts Trade With Israel Amid Deteriorating Relations"). Israeli Proportion: 0.42, Palestinian Proportion: 0.77.
   - **Cluster 1 (59 articles)**: "Conflict and Violence" (e.g., "How Iran and Israel Are Unnatural Adversaries"). Israeli Proportion: 0.58, Palestinian Proportion: 0.75.
   - **Cluster 2 (113 articles)**: "Protests and Cultural Support" (e.g., "The U.S. Must Embrace Palestinian Statehood Now"). Israeli Proportion: 0.52, Palestinian Proportion: 0.63.
@@ -33,6 +33,8 @@ Understanding the framing of the Israeli-Palestinian conflict in influential out
 - **Temporality Insights**
 ![Temporal Mentions](temporal_mentions.png)  
 *Figure: Number of mentions over time for Israeli and Palestinian terms.*
+
+
 
 ---
 
