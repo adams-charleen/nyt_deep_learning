@@ -1,5 +1,3 @@
-import pandas as pd
-import sqlite3
 import numpy as np
 from transformers import BertTokenizer, BertModel, pipeline
 from sklearn.cluster import KMeans
@@ -16,8 +14,8 @@ import plotly.graph_objects as go  # For bar plot in subplot
 from plotly.subplots import make_subplots  # For subplot layout
 
 # Set up directories for results
-results_dir = "/Users/charleenadams/nyt/results_deep_learning4"
-figures_dir = "/Users/charleenadams/nyt/figures_deep_learning4"
+results_dir = "/Users/charleenadams/nyt/results_deep_learning_5"
+figures_dir = "/Users/charleenadams/nyt/figures_deep_learning_5"
 os.makedirs(results_dir, exist_ok=True)
 os.makedirs(figures_dir, exist_ok=True)
 
@@ -71,13 +69,9 @@ logger.info(f"Proportion of headlines with Palestinian mentions: {prop_palestini
 
 # Perform a two-sided test of significance (two-sample proportion z-test)
 # Null hypothesis: prop_israeli = prop_palestinian
-# Pooled proportion
 pooled_prop = (israeli_mentions + palestinian_mentions) / (2 * total_headlines)
-# Standard error
 se = np.sqrt(pooled_prop * (1 - pooled_prop) * (2 / total_headlines))
-# Z-statistic
 z_stat = (prop_israeli - prop_palestinian) / se
-# Two-sided p-value
 p_value = 2 * (1 - norm.cdf(abs(z_stat)))
 
 # Interpret the result
@@ -102,7 +96,6 @@ plt.ylabel("Proportion of Headlines", fontsize=12)
 plt.ylim(0, 1)
 for i, prop in enumerate(proportions):
     plt.text(i, prop + 0.02, f"{prop:.3f}", ha='center', fontsize=12)
-# Add statistical analysis as text on the plot
 stats_text = f"Z-statistic: {z_stat:.3f}\nP-value: {p_value:.3f}"
 plt.text(0.5, 0.9, stats_text, ha='center', va='center', fontsize=10, bbox=dict(facecolor='white', alpha=0.8))
 plt.savefig(os.path.join(figures_dir, "proportions_mentions.png"), dpi=600)
@@ -138,6 +131,12 @@ cluster_labels = kmeans.fit_predict(embeddings)
 
 # Add cluster labels to the filtered dataframe
 df_filtered["cluster"] = cluster_labels
+
+# Step 6.5: Save articles with cluster assignments
+logger.info("Saving articles with cluster assignments...")
+cluster_articles_file = os.path.join(results_dir, "articles_by_cluster.csv")
+df_filtered[["headline", "cluster"]].to_csv(cluster_articles_file, index=False)
+logger.info(f"Articles with cluster assignments saved to {cluster_articles_file}")
 
 # Step 7: Analyze clusters for Israeli/Palestinian mentions
 logger.info("Analyzing clusters for Israeli and Palestinian mentions...")
@@ -177,9 +176,7 @@ sentiment_analyzer = pipeline("sentiment-analysis", model="nlptown/bert-base-mul
 # Function to predict sentiment using the BERT-based model
 def predict_bert_sentiment(headline):
     result = sentiment_analyzer(headline)[0]
-    # The model returns a star rating (1 to 5); convert to a sentiment score (-1 to 1)
     star_rating = int(result['label'].split()[0])  # Extract the number (1 to 5)
-    # Map star rating to sentiment score: 1 star = -1, 3 stars = 0, 5 stars = 1
     sentiment_score = (star_rating - 3) / 2  # Linear mapping: 1 -> -1, 3 -> 0, 5 -> 1
     return sentiment_score
 
@@ -322,39 +319,29 @@ embeddings_2d = pca.fit_transform(embeddings)
 # Compute cluster sizes for the legend
 cluster_sizes = df_filtered["cluster"].value_counts().sort_index()
 
-# Define cluster descriptions based on analysis
-cluster_descriptions = {
-    0: "International Actions and Diplomacy",
-    1: "Conflict and Violence",
-    2: "Protests and Cultural Support",
-    3: "Peace Efforts and Politics",
-    4: "U.S. Politics and Protests"
-}
-
-# Create legend labels with cluster sizes, descriptions, and proportions
+# Create legend labels with cluster sizes and proportions (no predefined themes)
 legend_labels = [
-    f"Cluster {i} ({cluster_sizes[i]} articles): {cluster_descriptions[i]}\nIsraeli Proportion: {cluster_israeli_props[i]:.2f}, Palestinian Proportion: {cluster_palestinian_props[i]:.2f}"
+    f"Cluster {i} ({cluster_sizes[i]} articles)\nIsraeli Proportion: {cluster_israeli_props[i]:.2f}, Palestinian Proportion: {cluster_palestinian_props[i]:.2f}"
     for i in range(n_clusters)
 ]
 
-# Static PCA plot using Seaborn with enhanced legend and title
+# Static PCA plot using Seaborn with numeric labels
 plt.figure(figsize=(10, 8))
 sns.scatterplot(x=embeddings_2d[:, 0], y=embeddings_2d[:, 1], hue=cluster_labels, palette="deep", legend="full")
 plt.title(f"Headline Clusters (PCA Visualization) - {total_headlines} Articles", fontsize=14)
 plt.xlabel("PCA Component 1", fontsize=12)
 plt.ylabel("PCA Component 2", fontsize=12)
-# Update the legend with cluster sizes, descriptions, and proportions
 plt.legend(labels=legend_labels, title="Clusters", loc="best", fontsize=10)
 plt.savefig(os.path.join(figures_dir, "cluster_visualization.png"), dpi=600)
 plt.close()
 
-# Interactive PCA plot using Plotly with enhanced legend, title, larger hover tooltip, and bar plot subplot
+# Interactive PCA plot using Plotly with numeric labels
 df_plotly = pd.DataFrame({
     "PCA Component 1": embeddings_2d[:, 0],
     "PCA Component 2": embeddings_2d[:, 1],
     "Cluster": cluster_labels,
     "Cluster_Label": [
-        f"Cluster {label} ({cluster_sizes[label]} articles): {cluster_descriptions[label]}<br>Israeli Proportion: {cluster_israeli_props[label]:.2f}, Palestinian Proportion: {cluster_palestinian_props[label]:.2f}"
+        f"Cluster {label} ({cluster_sizes[label]} articles)<br>Israeli Proportion: {cluster_israeli_props[label]:.2f}, Palestinian Proportion: {cluster_palestinian_props[label]:.2f}"
         for label in cluster_labels
     ],
     "Headline": df_filtered["headline"]
@@ -363,8 +350,8 @@ df_plotly = pd.DataFrame({
 # Create a subplot layout: PCA scatter on the left, bar plot on the right
 fig = make_subplots(
     rows=1, cols=2,
-    column_widths=[0.65, 0.35],  # Adjusted widths to reduce space between plots
-    horizontal_spacing=0.1,  # Increased spacing between subplots
+    column_widths=[0.65, 0.35],
+    horizontal_spacing=0.1,
     subplot_titles=[
         f"Interactive Headline Clusters (PCA Visualization) - {total_headlines} Articles",
         "Proportions of Mentions"
@@ -392,7 +379,7 @@ fig.add_trace(
         marker_color=['blue', 'red'],
         text=[f"{prop_israeli:.3f}", f"{prop_palestinian:.3f}"],
         textposition='auto',
-        name="Proportion of Mentions",  # Relabel "Trace 5" to "Proportion of Mentions"
+        name="Proportion of Mentions",
         showlegend=True
     ),
     row=1, col=2
@@ -400,14 +387,14 @@ fig.add_trace(
 
 # Add statistical significance annotation to the bar plot
 fig.add_annotation(
-    x=0.5,  # Center of the bar plot subplot
-    y=1.5,  # Position above the bars
+    x=0.5,
+    y=1.5,
     text=f"Z-statistic: {z_stat:.3f}<br>P-value: {p_value:.3f}",
     showarrow=False,
     font=dict(size=10),
     align="center",
-    xref="x2",  # Reference the x-axis of the second subplot
-    yref="y2",  # Reference the y-axis of the second subplot
+    xref="x2",
+    yref="y2",
     bgcolor="white",
     bordercolor="black",
     borderwidth=1,
